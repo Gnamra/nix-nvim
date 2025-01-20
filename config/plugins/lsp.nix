@@ -1,5 +1,9 @@
   
   {pkgs,...} : {
+
+    plugins.cmp-nvim-lsp.enable = true;
+    plugins.fidget.enable = true;
+
     plugins.lsp = {
     enable = true;
     servers = {
