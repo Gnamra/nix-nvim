@@ -2,7 +2,22 @@
   plugins.cmp = {
   enable = true;
   autoEnableSources = true;
+  
+
   settings = {
+
+    snippet = {
+      expand = ''
+        function(args)
+          require('luasnip').lsp_expand(args.body)
+        end
+      '';
+    };
+
+    completion = {
+      completeopt = "menu,menuone,noinsert";
+    };
+
     mapping = {
         # Select the [n]ext item
         "<C-n>" = "cmp.mapping.select_next_item()";
@@ -52,10 +67,10 @@
         # For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         #    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       };
-    sources = [
-      { name = "nvim_lsp"; }
-      { name = "path"; }
-      { name = "buffer"; }
-    ];
+      sources = [
+        { name = "nvim_lsp"; }
+        { name = "path"; }
+        { name = "buffer"; }
+      ];
   };
 }
