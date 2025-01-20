@@ -13,6 +13,9 @@ let
   };
 in
 {
+  plugins.dap-lldb = {
+    enable = true;
+  };
   plugins.dap = {
     enable = true;
 

@@ -72,5 +72,6 @@
         { name = "path"; }
         { name = "buffer"; }
       ];
+    };
   };
 }

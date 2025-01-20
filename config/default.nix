@@ -1,7 +1,6 @@
 {pkgs, ...}:{
   # Import all your configuration modules here
   imports = [ 
-    ./bufferline.nix
     ./plugins/dap.nix
     ./plugins/lsp-cmp.nix
     ./plugins/lsp.nix
