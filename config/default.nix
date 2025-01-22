@@ -18,7 +18,6 @@
       };
       cache_enabled = 0;
     };
-    clipboard.register = "unnamedplus";
 
     colorschemes = {
       tokyonight = {
