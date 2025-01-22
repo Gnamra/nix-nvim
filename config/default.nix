@@ -9,12 +9,12 @@
   globals.mapleader = " ";
     globals.clipboard = {
       copy = {
-        "+" = ["clip.exe"];
-        "*" = ["clip.exe"];
+        "+" = ["yank.exe -i --crlf"];
+        "*" = ["yank.exe -i --crlf"];
       };
       paste = {
-        "+" = ["powershell.exe" "-c" "[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"\\r\", \"\"))"];
-        "*" = ["powershell.exe" "-c" "[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"\\r\", \"\"))"];
+        "+" = ["yank.exe -o --lf"]; 
+        "*" = ["yank.exe -o --lf"]; 
       };
       cache_enabled = 0;
     };
