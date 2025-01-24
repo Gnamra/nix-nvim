@@ -4,6 +4,7 @@
     ./plugins/dap.nix
     ./plugins/lsp-cmp.nix
     ./plugins/lsp.nix
+    ./plugins/telescope.nix
       
   ];
   globals.mapleader = " ";
@@ -56,19 +57,8 @@
 	rust
       ];
     };
-    plugins.telescope = {
-      enable = true;
-      keymaps = {
-       "<leader>sk" = {
-          mode = "n";
-          action = "keymaps";
-          options = {
-            desc = "[S]earch [K]eymaps";
-          };
-        };
-      };
-    };
-    plugins.web-devicons.enable = true;
+    plugins.luasnip.enable = true;
+   plugins.web-devicons.enable = true;
     plugins.which-key = {
       enable = true;
 
